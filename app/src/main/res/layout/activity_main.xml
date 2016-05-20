@@ -10,22 +10,32 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.dheerajpille.anaid.MainActivity">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Report"
-        android:id="@+id/report"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:onClick="onClickReport"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="AniDex"
-        android:id="@+id/anidex"
-        android:layout_marginTop="48dp"
-        android:layout_below="@+id/report"
-        android:layout_centerHorizontal="true"
-        android:onClick="onClickAniDex"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Report"
+            android:id="@+id/report"
+            android:onClick="onClickReport"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/anidex"
+            android:layout_alignStart="@+id/anidex"
+            android:layout_marginTop="162dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AniDex"
+            android:id="@+id/anidex"
+            android:layout_marginTop="48dp"
+            android:layout_below="@+id/report"
+            android:layout_centerHorizontal="true"
+            android:onClick="onClickAniDex"
+            android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
 </RelativeLayout>
