@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.dheerajpille.anaid">
+    package="com.dheerajpille.anaid">
     // If android.hardware.camera does not work, try using camera2.
     <uses-feature android:name="android.hardware.camera"
-                  android:required="true" />
+        android:required="true" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".splashActivity">
+        android:theme="@style/AppTheme"
+        android:screenOrientation="portrait">
+        <activity
+            android:name=".splashActivity"
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -18,7 +21,9 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -30,5 +35,5 @@
         <activity android:name=".reportActivity">
         </activity>
     </application>
-    
+
 </manifest>
