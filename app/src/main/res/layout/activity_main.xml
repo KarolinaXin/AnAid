@@ -2,10 +2,10 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.dheerajpille.anaid.MainActivity">
+    tools:context="com.dheerajpille.anaid.MainActivity"
+    android:id="@+id/homeScreen">
     <!--android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -17,37 +17,56 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">-->
 
-        <ImageView
-            android:id="@+id/mainScreen"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="fitXY"
-            android:src="@drawable/main"
-            android:duration="5000"
-            android:fillAfter="true">
-        </ImageView>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="report"
+        android:id="@+id/report"
+        android:layout_marginRight="36dp"
+        android:layout_marginEnd="36dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="194dp" />
 
-        <!--<Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Report"
-            android:id="@+id/report"
-            android:onClick="onClickReport"
-            android:layout_alignParentTop="true"
-            android:layout_alignLeft="@+id/anidex"
-            android:layout_alignStart="@+id/anidex"
-            android:layout_marginTop="162dp"
-            android:layout_gravity="center_horizontal"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="anidex"
+        android:id="@+id/anidex"
+        android:layout_marginLeft="46dp"
+        android:layout_marginStart="46dp"
+        android:layout_alignTop="@+id/report"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="AniDex"
-            android:id="@+id/anidex"
-            android:layout_marginTop="48dp"
-            android:layout_below="@+id/report"
-            android:layout_centerHorizontal="true"
-            android:onClick="onClickAniDex"
-            android:layout_gravity="center_horizontal"/>-->
+    <!--<Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Report"
+        android:id="@+id/report"
+        android:onClick="onClickReport"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/anidex"
+        android:layout_alignStart="@+id/anidex"
+        android:layout_marginTop="162dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AniDex"
+        android:id="@+id/anidex"
+        android:layout_marginTop="48dp"
+        android:layout_below="@+id/report"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClickAniDex"
+        android:layout_gravity="center_horizontal"/>-->
     <!--</LinearLayout>-->
+
+    <!--thismightwork<android.support.v4.view.ViewPager
+        android:id="@+android:id/viewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        />-->
 </RelativeLayout>

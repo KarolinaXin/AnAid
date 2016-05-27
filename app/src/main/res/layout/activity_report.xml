@@ -8,7 +8,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.dheerajpille.anaid.reportActivity">
+    tools:context=".ReportActivity"
+    android:id="@+id/reportScreen">
 
     <LinearLayout
         android:orientation="vertical"
@@ -21,29 +22,41 @@
             android:layout_height="wrap_content"
             >
 
-            <ImageView
+            <ImageButton
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:id="@+id/img"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_toStartOf="@+id/submit"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:layout_weight="10"
-                android:layout_margin="10dp"/>
+                android:layout_weight="1" />
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Capture Image"
-                android:id="@+id/capture"
-                android:layout_below="@+id/img"
-                android:layout_alignLeft="@+id/submit"
-                android:layout_alignStart="@+id/submit"
-                android:onClick="onClickCapture"
-                android:layout_weight="1"
-                android:layout_gravity="center_vertical"/>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dead"
+                    android:id="@+id/deCheck"
+                    android:layout_gravity="center_vertical"
+                    android:checked="false" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Injured"
+                    android:id="@+id/inCheck"
+                    android:checked="false" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Other"
+                    android:id="@+id/otCheck"
+                    android:checked="false" />
+            </LinearLayout>
+
         </LinearLayout>
 
         <TextView

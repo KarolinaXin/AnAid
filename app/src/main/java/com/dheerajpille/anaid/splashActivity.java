@@ -7,7 +7,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
-public class splashActivity extends Activity {
+public class SplashActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,10 +15,12 @@ public class splashActivity extends Activity {
         setContentView(R.layout.activity_splash);
 
         final ImageView iv = (ImageView)findViewById(R.id.splashPic);
+
         final Animation an = AnimationUtils.loadAnimation(getBaseContext(),R.anim.rotate);
         final Animation an2 = AnimationUtils.loadAnimation(getBaseContext(),R.anim.abc_fade_out);
 
         iv.startAnimation(an);
+
         an.setAnimationListener(new Animation.AnimationListener(){
             @Override
             public void onAnimationStart(Animation animation){
@@ -29,8 +31,9 @@ public class splashActivity extends Activity {
             public void onAnimationEnd(Animation animation){
                 iv.startAnimation(an2);
                 finish();
-                Intent i = new Intent(getBaseContext(), MainActivity.class);
-                startActivity(i);
+                Intent main = new Intent(getBaseContext(), MainActivity.class);
+                startActivity(main);
+                finish();
             }
 
             @Override
