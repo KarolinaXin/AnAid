@@ -14,14 +14,14 @@ public class SplashActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        final ImageView iv = (ImageView)findViewById(R.id.splashPic);
+        final ImageView splashPic = (ImageView)findViewById(R.id.splashPic);
 
-        final Animation an = AnimationUtils.loadAnimation(getBaseContext(),R.anim.rotate);
-        final Animation an2 = AnimationUtils.loadAnimation(getBaseContext(),R.anim.abc_fade_out);
+        final Animation anim1 = AnimationUtils.loadAnimation(getBaseContext(),R.anim.splash_anim);
+        final Animation anim2 = AnimationUtils.loadAnimation(getBaseContext(),R.anim.abc_fade_out);
 
-        iv.startAnimation(an);
+        splashPic.startAnimation(anim1);
 
-        an.setAnimationListener(new Animation.AnimationListener(){
+        anim1.setAnimationListener(new Animation.AnimationListener(){
             @Override
             public void onAnimationStart(Animation animation){
 
@@ -29,7 +29,7 @@ public class SplashActivity extends Activity {
 
             @Override
             public void onAnimationEnd(Animation animation){
-                iv.startAnimation(an2);
+                splashPic.startAnimation(anim2);
                 finish();
                 Intent main = new Intent(getBaseContext(), MainActivity.class);
                 startActivity(main);
